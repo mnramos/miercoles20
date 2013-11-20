@@ -1,0 +1,64 @@
+
+
+import java.io.*; 
+
+public class Leer{
+	
+ public static String dato() // Lee un dato de cualquier cadena 
+  {
+  String sdato=" ";
+  try{
+  	 InputStreamReader isr=new InputStreamReader(System.in);
+  	 BufferedReader flujoE = new BufferedReader(isr);
+  	 sdato=flujoE.readLine();
+  	 }
+  catch (IOException e)
+  	{
+  	System.out.println("Error "+e.getMessage());
+  	}
+  return sdato;
+  
+  }
+
+ public static int datoInt()   // El nombre del método es datoInt()
+  {
+  return Integer.parseInt(dato());
+  }
+  
+
+ public static float datoFloat()
+  {
+  return Float.parseFloat(dato());	
+  }
+//Leer un char por teclado
+
+public static char datoChar( ){	  // El nombre del método es datoChar()
+	char c = ' ';
+		try {
+			java.io.BufferedInputStream b = new BufferedInputStream(System.in);
+			 c = (char) b.read();
+		} catch (IOException e) {
+			System.out.println("Error al leer");
+			e.printStackTrace();
+		}
+	return c;
+	}
+  
+ public static long datoLong()		// El nombre del método es datoLong()
+  {
+  return Long.parseLong(dato());
+  }
+ 
+ public static short datoShort()	// El nombre del método es datoShort()
+  {
+  return Short.parseShort(dato());	
+  }
+ 
+ public static double datoDouble()	// El nombre del método es datoDouble()
+  {
+  return Double.parseDouble(dato());	
+  }
+ 
+ 	
+ 
+}
